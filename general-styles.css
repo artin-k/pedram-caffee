@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'B Ziba_0';
+    src: url('fonts/B Ziba_0.ttf') format('truetype');
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'B Ziba_0';
+    font-weight: 700;
+}

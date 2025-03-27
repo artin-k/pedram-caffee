@@ -1,0 +1,180 @@
+header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #062654;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+}
+
+.right-section {
+    width: 180px;
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.off-screen-menu {
+    background-color: rgb(13, 20, 51);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Centers the whole menu vertically */
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.3s ease;
+}
+
+.ham-set {
+    list-style-type: none;
+    /* Removes default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stacks items vertically */
+    gap: 20px;
+    /* Adds space between items */
+    align-items: center;
+}
+
+.ham-menu-item {
+    font-size: x-large;
+    display: flex;
+    flex-direction: row-reverse;
+    /* Puts the image to the right of the text */
+    align-items: center;
+    /* Aligns icon and text horizontally within each item */
+    gap: 10px;
+    /* Adds space between the icon and the text */
+}
+
+.ham-item {
+    text-decoration: none;
+    color: #fff;
+    /* Adjust color as needed */
+}
+
+.home-icon {
+    margin-right: 8px;
+    /* Space between icon and text */
+    display: inline-block;
+    width: 25px;
+}
+
+.insta-icon {
+    width: 30px;
+}
+
+.ham-item:visited {
+    color: white;
+}
+
+.ham-item:hover {
+    color: #ababb3;
+}
+
+
+/* off-screen-menu */
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+/* ham menu */
+
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    /* Use absolute positioning */
+    right: 20px;
+    /* Move it to the right side of the header */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust vertical alignment */
+}
+
+.ham-menu span {
+    height: 4px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.921);
+    border-radius: 20px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* Ensure the parent takes full width and has no padding/margin */
+
+
+/* Ensure the container takes full width */
+
+.left-section {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.back-container {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 40px;
+}
+
+.back-img {
+    width: 20px;
+}

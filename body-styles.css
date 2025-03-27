@@ -1,0 +1,256 @@
+.main-cafe-pic {
+    display: flex;
+    /* Centers the image horizontally */
+    justify-content: center;
+    /* Centers the image horizontally */
+    align-items: center;
+    /* Centers the image vertically */
+    margin: 0;
+    /* Remove any default margin */
+    margin-top: 80px;
+}
+
+
+/* Style for the bouncing image */
+
+.bounce {
+    position: relative;
+    /* Allows the image to move */
+    animation: upDown 2s infinite ease-in-out;
+    /* Apply animation */
+}
+
+
+/* Keyframes for bounce animation */
+
+@keyframes upDown {
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end in the original position */
+    }
+    50% {
+        transform: translateY(-20px);
+        /* Move up by 20px */
+    }
+}
+
+
+/* Styles for the title section */
+
+
+/* App.css */
+
+.background-svg {
+    position: fixed;
+    /* Or absolute, depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* To keep it behind other content */
+    background-image: url('./assets/Frame3.svg');
+    /* Path to your SVG */
+    background-size: cover;
+    /* Adjusts size to cover the entire element */
+    background-repeat: no-repeat;
+    /* Prevents repeating */
+    z-index: 1000;
+}
+
+.main-title {
+    text-align: center;
+    /* Center the text */
+    margin: 0;
+    /* Remove default margin to avoid top space */
+    padding: 20px 0;
+    /* Add vertical padding for spacing below the image */
+    color: #333;
+    /* Title color (you can change this) */
+    font-size: 24px;
+    /* Font size (adjust as needed) */
+    font-family: Arial, sans-serif;
+    /* Font family (optional) */
+}
+
+
+/* Ensure the h1 is displayed as a block element */
+
+.main-title h1 {
+    display: block;
+    /* Ensures it takes a new line */
+}
+
+.main-pic-container {
+    margin: 0;
+    padding: 0;
+}
+
+.bounce {
+    position: relative;
+    /* Allows the image to move */
+    animation: upDown 2s infinite ease-in-out;
+    /* Apply animation */
+}
+
+
+/* Keyframes for bounce animation */
+
+@keyframes upDown {
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Start and end in the original position */
+    }
+    50% {
+        transform: translateY(-20px);
+        /* Move up by 20px */
+    }
+}
+
+
+/* Styles for the title section */
+
+.main-title {
+    text-align: center;
+    /* Center the text */
+    margin: 0;
+    /* Remove default margin to avoid top space */
+    padding: 20px 0;
+    /* Add vertical padding for spacing below the image */
+    color: #333;
+    /* Title color (you can change this) */
+    font-size: 24px;
+    /* Font size (adjust as needed) */
+    font-family: Arial, sans-serif;
+    /* Font family (optional) */
+}
+
+
+/* Ensure the h1 is displayed as a block element */
+
+.main-title h1 {
+    display: block;
+    /* Ensures it takes a new line */
+    font-size: xx-large;
+}
+
+.products-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#connector-animation {
+    position: absolute;
+    /* Allows for layering control */
+    top: 100px;
+    width: 50000px;
+    margin-top: 200px;
+    /* Adjust as needed to position behind items */
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust centering */
+    z-index: 1;
+    /* Lower z-index to place behind items */
+    width: 500px;
+    /* Ensure it spans as needed */
+    height: 100vh;
+    /* Adjust as needed */
+}
+
+.connected-item {
+    position: relative;
+    /* Keeps items above animation */
+    z-index: 1;
+    /* Higher z-index to place above animation */
+    margin-top: 100px;
+}
+
+.menu-container {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Main image styling */
+
+.pop-up {
+    position: relative;
+    width: 200px;
+    /* Set desired width for the circle */
+    height: 200px;
+    /* Set desired height for the circle */
+    overflow: hidden;
+    /* Ensures the image stays within the circle */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Pop-up hover effect */
+
+.pop-up:hover {
+    transform: scale(1.2);
+}
+
+
+/* Caption styling */
+
+.caption {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+
+/* Caption styling */
+
+.caption {
+    opacity: 0;
+    /* Start with invisible caption */
+    transform: scale(0);
+    /* Start with no size */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+    margin-top: 20px;
+    /* Space between image and caption */
+    font-size: 24px;
+    /* Adjust font size as needed */
+    text-align: center;
+    /* Align the caption text to the left */
+}
+
+
+/* Class to apply when caption is visible */
+
+.caption.visible {
+    opacity: 1;
+    /* Make it visible */
+    transform: scale(1);
+    /* Scale it to original size */
+}
+
+.connector-1 {
+    width: 500;
+    /* Size of flash */
+    height: 350px;
+    left: -70px;
+    position: absolute;
+    bottom: -215px;
+    transform: rotate(-15deg);
+    /* Adjust to overlap with the main image */
+    z-index: 0;
+}
